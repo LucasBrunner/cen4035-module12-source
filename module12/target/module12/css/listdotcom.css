@@ -1,0 +1,156 @@
+* { 
+  box-sizing: border-box; 
+	margin: 0px;
+}
+html {
+	font-family: Verdana, Arial, sans-serif;
+  --min-usable-width: 800px;
+  --max-usable-width: 1280px;
+}
+body {
+	background-color: var(--background-color);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  min-width: min-content;
+}
+
+a:link {
+  color: var(--unvisited-link);
+}
+
+a:visited {
+  color: var(--visited-link);
+}
+
+header {
+  background-color: var(--secondary-color);
+  width: 100%;
+}
+#header-content {
+  padding: 10px;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin: 0px auto;
+	min-width: var(--min-usable-width);
+	max-width: var(--max-usable-width);
+}
+#lightmodeToggleButton {
+  margin-left: auto;
+  padding: 5px;
+}
+#header-checkbox {
+  width: 60px; 
+  height: 60px; 
+  background-image: var(--checkboxicon);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#content {
+  flex: 1;
+	min-width: var(--min-usable-width);
+	max-width: var(--max-usable-width);
+	width: 100%;
+  background-color: var(--primary-color);
+  align-self: center;
+  margin: 0px 10px;
+}
+#listapp_example {
+  margin-top: 50px;
+  width: 500px;
+}
+
+table {
+  /* width: 100%; */
+  padding: 5px;
+  border-spacing: 0px;
+}
+
+.top_button {
+  margin: 10px 5px 5px 10px;
+}
+.bottom_button {
+  margin: 5px 5px 5px 10px;
+}
+
+tr {
+  padding: 5px;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--background-color);
+}
+tr:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+
+td:first-child, th:first-child {
+  border: none;
+}
+table tr td, table tr th {
+  border-right: 3px solid var(--primary-color);
+}
+table tr td:last-of-type, table tr th:last-of-type {
+  border: none;
+}
+
+td, th {
+  padding: 5px;
+  margin: 0px;
+  border-spacing: 0px;
+}
+td:nth-child(even), th:nth-child(even) {
+  background-color: calc(inherit + #cfcfcf);
+}
+
+footer {
+  background: var(--secondary-color);
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 5px 0px;
+  font-size: smaller;
+}
+footer > * {
+  padding: 2px 0px;
+}
+
+.light-mode {
+  --primary-color: #f0f0f0;
+  --secondary-color: #cfcfcf;
+  --background-color: #ffffff;
+  --button-color: #b6b6b6;
+  --button-hover-color: #a3a3a3;
+  --visited-link: #6a0dad;
+  --unvisited-link: #0f52ba;
+  --checkboxicon: url(../images/light_checkboxicon.svg);
+  color: #000000;
+}
+.dark-mode {
+  --primary-color: #1e1e1e;
+  --secondary-color: #323233;
+  --background-color: #3c3c3c;
+  --button-color: #252526;
+  --button-hover-color: #505050;
+  --visited-link: #a45ee5;
+  --unvisited-link: #6ca0dc;
+  --checkboxicon: url(../images/dark_checkboxicon.svg);
+  color: #f0f0f0;
+}
+
+.button {
+  background-color: var(--button-color);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.button:hover {
+  background-color: var(--button-hover-color);
+}
